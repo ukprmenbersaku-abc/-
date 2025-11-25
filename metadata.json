@@ -1,0 +1,5 @@
+{
+  "name": "画像編集ツール",
+  "description": "A modern tool to batch convert, resize, and rename image files (JPG, PNG, WEBP) locally in your browser.",
+  "requestFramePermissions": []
+}
