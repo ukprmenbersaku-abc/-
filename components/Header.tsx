@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers, Zap } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { Language, translations } from '../utils/translations';
 
 interface HeaderProps {
@@ -13,8 +13,21 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage, t }) => {
     <header className="w-full py-6 px-4 border-b border-gray-800 bg-dark/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-5xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-gradient-to-br from-primary to-secondary rounded-lg shadow-lg shadow-primary/20">
-            <Layers className="w-6 h-6 text-white" />
+          <div className="flex-shrink-0">
+            <svg viewBox="0 0 24 24" className="w-10 h-10 shadow-lg shadow-primary/20 rounded-xl">
+              <defs>
+                <linearGradient id="header-logo-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#6366f1" />
+                  <stop offset="100%" stopColor="#a855f7" />
+                </linearGradient>
+              </defs>
+              <rect width="24" height="24" rx="6" fill="url(#header-logo-gradient)" />
+              <g fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" transform="translate(12 12) scale(0.65) translate(-12 -12)">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </g>
+            </svg>
           </div>
           <div>
             <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
