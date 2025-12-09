@@ -8,7 +8,7 @@ import FileDropzone from './components/FileDropzone';
 import FileItem from './components/FileItem';
 import Button from './components/Button';
 
-import { ProcessedFile, ProcessStatus, OutputFormat, ConversionSettings, ResizeMode } from './types';
+import { ProcessedFile, ProcessStatus, OutputFormat, ConversionSettings } from './types';
 import { convertImage, getExtensionFromMime } from './services/imageService';
 import { translations, Language } from './utils/translations';
 
